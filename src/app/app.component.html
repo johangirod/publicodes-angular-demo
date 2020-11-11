@@ -3,5 +3,18 @@
   <h1>
     Calcul de l'indemnité de grand déplacement
   </h1>
-  <app-result></app-result>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+
+  <div>
+    <label for="durée">
+      Durée du déplacement
+    </label>
+    <input id="durée" type="text" formControlName="durée du déplacement"> jours
+  </div>
+
+  <button class="button" type="submit">Calculer</button>
+
+</form>
+  <app-result [situation]="situation"></app-result>
 </div>

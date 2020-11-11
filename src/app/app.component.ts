@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'publicodes-angular-demo';
+  situation;
+  form;
+  constructor(private formBuilder: FormBuilder){
+    this.form = this.formBuilder.group({
+      'durée du déplacement': ''
+    })
+  }
+
+  onSubmit(situation) {
+    this.situation = situation;
+  }
 }

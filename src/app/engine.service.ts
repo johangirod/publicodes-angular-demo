@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import rules from "../rules";
 import Engine, { formatValue } from "publicodes";
 
+
 @Injectable({
   providedIn: "root"
 })
@@ -10,6 +11,10 @@ export class EngineService {
 
   constructor() {
     this.engine = new Engine(rules);
+  }
+
+  setSituation(situation) {
+    this.engine.setSituation(situation);
   }
 
   evaluate(expression: string) {
