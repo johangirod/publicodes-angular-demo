@@ -7,15 +7,9 @@ import Engine, { formatValue } from "publicodes";
 })
 export class EngineService {
   engine: Engine<string>;
-  situation: Record<string, string> = {};
 
   constructor() {
     this.engine = new Engine(rules);
-  }
-
-  setSituation(rule: string, value: string) {
-    this.situation[rule] = value;
-    this.engine.setSituation(this.situation);
   }
 
   evaluate(expression: string) {
