@@ -18,5 +18,6 @@ export class ResultComponent implements OnChanges {
   ngOnChanges(changes) {
     this.engineService.setSituation(changes.situation.currentValue)
     this.indemnite = this.engineService.evaluate("indemnité");
+    this.indemniteMensuelle = this.engineService.evaluate("indemnité / durée du déplacement", {unit: '€/mois'});
   }
 }
