@@ -17,8 +17,8 @@ export class EngineService {
     this.engine.setSituation(situation);
   }
 
-  evaluate(expression: string) {
-    return formatValue(this.engine.evaluate(expression));
+  evaluate(expression: string, options?: {unit: string}) {
+    return formatValue(this.engine.evaluate(expression, options));
   }
 }
 

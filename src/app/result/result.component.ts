@@ -11,6 +11,7 @@ import { EngineService } from "../engine.service";
 export class ResultComponent implements OnChanges {  
   @Input() situation;
   indemnite: string;
+  indemniteMensuelle: string;
 
   constructor(private engineService: EngineService) {}
   
