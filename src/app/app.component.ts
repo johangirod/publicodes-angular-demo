@@ -11,7 +11,8 @@ export class AppComponent {
   form;
   constructor(private formBuilder: FormBuilder){
     this.form = this.formBuilder.group({
-      'durée du déplacement': ''
+      'durée du déplacement': '',
+      'région parisienne': ''
     })
   }
 
